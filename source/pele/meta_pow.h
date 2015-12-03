@@ -17,6 +17,9 @@
 
 namespace pele{
 
+/**
+ * Power algorithm, see e.g. Skiena, Alg Design Manual, page 48 
+ */
 template<class T, int N>
 struct meta_pow{
     static T f(const T x)
