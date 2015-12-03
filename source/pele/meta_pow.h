@@ -21,7 +21,12 @@ template<class T, int N>
 struct meta_pow{
     static T f(const T x)
     {
-        return meta_pow<T, N - 1>::f(x) * x;
+        T tmp = meta_pow<T, N/2>::f(x);
+        tmp *= tmp;
+        if (N % 2) {
+            return x * tmp;
+        }
+        return tmp;
     }
 };
 
